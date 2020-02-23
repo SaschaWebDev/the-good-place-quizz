@@ -1,4 +1,7 @@
-import '../Welcome.css';
+import React from 'react';
+
+import welcomeSVG from '../styles/welcome.svg';
+import '../styles/Welcome.css';
 
 class Welcome extends React.Component {
   constructor(props) {
@@ -9,7 +12,13 @@ class Welcome extends React.Component {
   render() {
     return (
       <div class='welcome-container'>
-        <div>WELCOME</div>
+        <div class='title noselect'>The Good Place</div>
+        <div class='title-sub noselect'>
+          Finde heraus ob du ein guter Mensch bist indem du dein verhalten
+          intuitiv beschreibst.
+        </div>
+        <img class='cta-svg noselect' src={welcomeSVG} />
+        <button class='cta-button noselect'>Teste dich!</button>
       </div>
     );
   }
