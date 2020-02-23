@@ -1,0 +1,19 @@
+.quiz-container {
+  background-color: #4ec858;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: black;
+
+  max-height: 90vh;
+  min-height: 90vh;
+  max-width: 100vh;
+  min-width: 100vw;
+
+  font-family: 'Montserrat', cursive;
+  color: white;
+
+  touch-action: manipulation;
+}

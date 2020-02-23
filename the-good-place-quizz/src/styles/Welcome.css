@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
 
 body,
 html {
@@ -40,7 +38,7 @@ html {
 }
 
 .title-sub {
-  margin-top: 2.2rem;
+  margin-top: 2rem;
   margin-bottom: 2.8rem;
   font-size: 1.25rem;
   max-width: 70vw;
@@ -56,7 +54,8 @@ html {
   margin-top: 2.5rem;
   background-color: #c9504e;
   outline: none;
-  border-radius: 5px;
+  border-radius: 40px;
+
   border: 3px solid transparent;
   box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.1),
     -3px -3px 3px 3px rgba(121, 182, 126, 0.2),
@@ -77,6 +76,5 @@ html {
   -khtml-user-select: none; /* Konqueror HTML */
   -moz-user-select: none; /* Old versions of Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Opera and Firefox */
+  user-select: none; /* Non-prefixed version, currently */
 }

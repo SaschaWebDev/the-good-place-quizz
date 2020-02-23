@@ -9,6 +9,10 @@ class Welcome extends React.Component {
     this.state = {};
   }
 
+  redirectToQuiz = () => {
+    this.props.history.push('/quiz');
+  };
+
   render() {
     return (
       <div class='welcome-container'>
@@ -17,8 +21,16 @@ class Welcome extends React.Component {
           Finde heraus, ob du ein guter Mensch bist, indem du dein Verhalten
           intuitiv beschreibst.
         </div>
-        <img class='cta-svg noselect' src={welcomeSVG} />
-        <button class='cta-button noselect'>Teste dich!</button>
+        <img
+          class='cta-svg noselect'
+          src={welcomeSVG}
+          alt='Illustraiton of a sitting woman with a laptop in red.'
+        />
+        <button
+          class='cta-button noselect'
+          onClick={() => this.redirectToQuiz()}>
+          Teste dich!
+        </button>
       </div>
     );
   }
