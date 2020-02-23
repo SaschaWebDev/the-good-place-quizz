@@ -14,7 +14,7 @@ class Welcome extends React.Component {
       <div class='welcome-container'>
         <div class='title noselect'>The Good Place</div>
         <div class='title-sub noselect'>
-          Finde heraus ob du ein guter Mensch bist indem du dein verhalten
+          Finde heraus, ob du ein guter Mensch bist, indem du dein Verhalten
           intuitiv beschreibst.
         </div>
         <img class='cta-svg noselect' src={welcomeSVG} />
