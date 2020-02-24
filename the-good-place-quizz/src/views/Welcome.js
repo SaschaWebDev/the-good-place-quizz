@@ -24,7 +24,7 @@ class Welcome extends React.Component {
         <img
           class='cta-svg noselect'
           src={welcomeSVG}
-          alt='Illustraiton of a sitting woman with a laptop in red.'
+          alt='Illustraition of a sitting woman with a laptop in red.'
         />
         <button
           class='cta-button noselect'

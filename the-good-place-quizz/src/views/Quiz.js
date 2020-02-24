@@ -103,6 +103,10 @@ class Quiz extends React.Component {
         answerThree: 'Vertrag mit Stromanbieter erneuerbarer Energien',
       });
     }
+
+    if (this.state.questionCount === 4) {
+      this.props.history.push('/result');
+    }
   };
 
   render() {

@@ -12,24 +12,26 @@ class Result extends React.Component {
     this.props.history.push('/quiz');
   }; */
 
+  resetQuiz = () => {
+    this.props.history.push('/');
+  };
+
   render() {
     return (
       <div class='result-container'>
-        {/* <div class='title noselect'>The Good Place</div>
-        <div class='title-sub noselect'>
-          Hast du einen Platz im Good Place verdient? Beantworte einfach die
-          Fragen intuitiv.
+        <div class='result-title noselect'>The Bad Place</div>
+        <div class='result-title-sub noselect'>
+          Beflissen, leider haben die Konsequenzen deiner Handlungen dir ein
+          Leben im Bad Place verschafft.
         </div>
-        <img
+        {/* <img
           class='cta-svg noselect'
           src={welcomeSVG}
-          alt='Illustraiton of a sitting woman with a laptop in red.'
-        />
-        <button
-          class='cta-button noselect'
-          onClick={() => this.redirectToQuiz()}>
-          Teste dich!
-        </button> */}
+          alt='Illustraition of a sitting woman with a laptop in red.'
+        /> */}
+        <button class='result-cta-button' onClick={() => this.resetQuiz()}>
+          Versuch es nochmal!
+        </button>
       </div>
     );
   }
