@@ -1,16 +1,21 @@
 import React from 'react';
 
+import DragonAnimation from '../Components/DragonAnimation.js';
 import '../styles/Result.css';
 
 class Result extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      hidden: false,
+    };
   }
 
-  /*  redirectToQuiz = () => {
-    this.props.history.push('/quiz');
-  }; */
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ hidden: true });
+    }, 1100);
+  }
 
   resetQuiz = () => {
     this.props.history.push('/');
@@ -18,9 +23,9 @@ class Result extends React.Component {
 
   render() {
     return (
-      <div class='result-container'>
-        <div class='result-title noselect'>The Bad Place</div>
-        <div class='result-title-sub noselect'>
+      <div className='result-container noselect'>
+        <div className='result-title noselect'>The Bad Place</div>
+        <div className='result-title-sub noselect'>
           Beflissen, leider haben die Konsequenzen deiner Handlungen dir ein
           Leben im Bad Place verschafft.
         </div>
@@ -29,7 +34,15 @@ class Result extends React.Component {
           src={welcomeSVG}
           alt='Illustraition of a sitting woman with a laptop in red.'
         /> */}
-        <button class='result-cta-button' onClick={() => this.resetQuiz()}>
+        {this.state.hidden ? (
+          <DragonAnimation />
+        ) : (
+          <div className='loading'>Loading...</div>
+        )}
+
+        <button
+          className='result-cta-button noselect'
+          onClick={() => this.resetQuiz()}>
           Versuch es nochmal!
         </button>
       </div>
