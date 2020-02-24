@@ -2,19 +2,23 @@ import React from 'react';
 
 import DragonAnimation from '../Components/DragonAnimation.js';
 import '../styles/Result.css';
+import FlameAnimation from '../Components/FlameAnimation.js';
 
 class Result extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      hidden: false,
+      hidden: true,
     };
   }
 
   componentDidMount() {
     setTimeout(() => {
-      this.setState({ hidden: true });
-    }, 1100);
+      this.setState({ hidden: false });
+      setTimeout(() => {
+        this.setState({ hidden: true });
+      }, 800);
+    }, 100);
   }
 
   resetQuiz = () => {
@@ -45,6 +49,7 @@ class Result extends React.Component {
           onClick={() => this.resetQuiz()}>
           Versuch es nochmal!
         </button>
+        <FlameAnimation onClick={() => this.resetQuiz()} />
       </div>
     );
   }
