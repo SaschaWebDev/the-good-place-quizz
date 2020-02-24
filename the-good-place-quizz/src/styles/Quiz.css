@@ -77,6 +77,37 @@
   font-size: 2rem;
 }
 
+.slide-left {
+  -webkit-animation: slide-left 500ms cubic-bezier(0.55, 0.085, 0.68, 0.53)
+    200ms both;
+  animation: slide-left 500ms cubic-bezier(0.55, 0.085, 0.68, 0.53) 200ms both;
+}
+
+@-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(200px);
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(200px);
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
 .lower-container {
   background-color: #4ec858;
   min-height: 45vh;

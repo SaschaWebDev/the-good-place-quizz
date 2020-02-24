@@ -19,6 +19,7 @@ class Quiz extends React.Component {
   }
 
   goBack = () => {
+    this.triggerSlideAnimation();
     if (this.state.questionCount === 1) {
       this.setState({
         questionCount: 1,
@@ -69,7 +70,7 @@ class Quiz extends React.Component {
   };
 
   nextQuestion = () => {
-    console.log('TRIGGERED');
+    this.triggerSlideAnimation();
     if (this.state.questionCount === 1) {
       this.setState({
         questionCount: 2,
@@ -109,6 +110,17 @@ class Quiz extends React.Component {
     }
   };
 
+  triggerSlideAnimation = () => {
+    let slideELements = Array.from(document.querySelectorAll('.slider'));
+    slideELements.forEach(element => {
+      element.classList.add('slide-left');
+
+      setTimeout(() => {
+        element.classList.remove('slide-left');
+      }, 600);
+    });
+  };
+
   render() {
     return (
       <div className='quiz-container noselect'>
@@ -134,7 +146,9 @@ class Quiz extends React.Component {
               style={{ width: `${this.state.percentage}%` }}
             />
           </div>
-          <div className='question-text'>{this.state.question}</div>
+          <div className='question-text slider slide-left'>
+            {this.state.question}
+          </div>
         </div>
 
         <div className='lower-container'>
@@ -142,9 +156,9 @@ class Quiz extends React.Component {
           <div className='middle-second-container'></div>
           <div className='middle-third-container'></div>
 
-          <div className='answer-container'>
+          <div className='answer-container slider slide-left'>
             <Ripple
-              className='answer answer-one btn'
+              className='answer answer-one btn '
               onClick={() => this.nextQuestion()}>
               <span className='ion-help-circled'></span>
               <div className='answer-symbol'>a</div>
