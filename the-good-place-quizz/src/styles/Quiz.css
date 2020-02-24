@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 .quiz-container {
   display: flex;
@@ -133,5 +134,43 @@
   background: #4ec858;
   height: 100%;
   border-radius: inherit;
-  transition: width 0.2s ease-in;
+  transition: width 0.25s ease-in;
+}
+
+.answer-container {
+  margin-top: 1rem;
+}
+
+.answer {
+  margin-top: 1.5vh;
+  max-height: 8.5vh;
+  height: 8.5vh;
+  width: 40vh;
+  /*   border: 1px solid red; */
+  border-left: 4px solid white;
+  display: flex;
+  align-items: center;
+  background-color: rgba(206, 216, 203, 0.315);
+}
+
+.answer-symbol {
+  /*  border: 1px solid blue; */
+  height: 100%;
+  width: 18%;
+  min-width: 18%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(240, 233, 233, 0.801);
+}
+
+.answer-text {
+  font-weight: bold;
+  margin-left: 1rem;
+
+  word-wrap: break-word;
+  width: 70%;
+  font-size: 1rem;
+  font-family: 'Roboto', cursive;
+  color: rgb(240, 233, 233);
 }
