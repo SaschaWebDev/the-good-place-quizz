@@ -11,7 +11,8 @@ class Quiz extends React.Component {
   render() {
     return (
       <div class='quiz-container'>
-        <div>TEST</div>
+        <div class='upper-container'>TEST</div>
+        <div class='lower-container'>TEST</div>
       </div>
     );
   }
