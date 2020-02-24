@@ -26,8 +26,8 @@ class Result extends React.Component {
       <div className='result-container noselect'>
         <div className='result-title noselect'>The Bad Place</div>
         <div className='result-title-sub noselect'>
-          Beflissen, leider haben die Konsequenzen deiner Handlungen dir ein
-          Leben im Bad Place verschafft.
+          <span className='text-intro'>Beflissen</span>, leider haben die
+          Konsequenzen deiner Handlungen dir ein Leben im Bad Place verschafft.
         </div>
         {/* <img
           class='cta-svg noselect'
