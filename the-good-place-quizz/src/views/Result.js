@@ -28,8 +28,8 @@ class Result extends React.Component {
   render() {
     return (
       <div className='result-container noselect'>
-        <div className='result-title noselect'>The Bad Place</div>
-        <div className='result-title-sub noselect'>
+        <div className='result-title noselect fade'>The Bad Place</div>
+        <div className='result-title-sub noselect fade'>
           <span className='text-intro'>Beflissen</span>, leider haben die
           Konsequenzen deiner Handlungen dir ein Leben im Bad Place verschafft.
         </div>
@@ -41,11 +41,11 @@ class Result extends React.Component {
         {this.state.hidden ? (
           <DragonAnimation />
         ) : (
-          <div className='loading'>Loading...</div>
+          <div className='loading fade'>Loading...</div>
         )}
 
         <button
-          className='result-cta-button noselect'
+          className='result-cta-button noselect fade-slow'
           onClick={() => this.resetQuiz()}>
           Versuch es nochmal!
         </button>

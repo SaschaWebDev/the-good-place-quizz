@@ -16,18 +16,18 @@ class Welcome extends React.Component {
   render() {
     return (
       <div class='welcome-container'>
-        <div class='title noselect'>The Good Place</div>
-        <div class='title-sub noselect'>
+        <div class='title noselect fade'>The Good Place</div>
+        <div class='title-sub noselect fade'>
           Hast du einen Platz im Good Place verdient? Beantworte einfach die
           Fragen intuitiv.
         </div>
         <img
-          class='cta-svg noselect'
+          class='cta-svg noselect fade-slow'
           src={welcomeSVG}
           alt='Illustraition of a sitting woman with a laptop in red.'
         />
         <button
-          class='cta-button noselect'
+          class='cta-button noselect fade-slow'
           onClick={() => this.redirectToQuiz()}>
           Teste dich!
         </button>

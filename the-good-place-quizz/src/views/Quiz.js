@@ -111,14 +111,14 @@ class Quiz extends React.Component {
   };
 
   triggerSlideAnimation = () => {
-    let slideELements = Array.from(document.querySelectorAll('.slider'));
+    /* let slideELements = Array.from(document.querySelectorAll('.slider'));
     slideELements.forEach(element => {
       element.classList.add('slide-left');
 
       setTimeout(() => {
         element.classList.remove('slide-left');
       }, 600);
-    });
+    }); */
   };
 
   render() {
@@ -146,7 +146,7 @@ class Quiz extends React.Component {
               style={{ width: `${this.state.percentage}%` }}
             />
           </div>
-          <div className='question-text slider slide-left'>
+          <div className='question-text slider slide-left slide-out'>
             {this.state.question}
           </div>
         </div>
@@ -156,7 +156,7 @@ class Quiz extends React.Component {
           <div className='middle-second-container'></div>
           <div className='middle-third-container'></div>
 
-          <div className='answer-container slider slide-left'>
+          <div className='answer-container slider slide-left slide-out'>
             <Ripple
               className='answer answer-one btn '
               onClick={() => this.nextQuestion()}>

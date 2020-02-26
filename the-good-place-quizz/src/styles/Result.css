@@ -85,3 +85,99 @@ body {
   font-size: 1.8rem;
   font-weight: 600;
 }
+
+.fade {
+  -webkit-animation: fade 1s;
+  animation: fade 1s;
+  -moz-animation: fade 1s;
+  -o-animation: fade 1s;
+  transition: opacity 1s ease;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-slow {
+  -webkit-animation: fade 3s;
+  animation: fade 3s;
+  -moz-animation: fade 3s;
+  -o-animation: fade 3s;
+  transition: opacity 3s ease;
+}
+
+@-webkit-keyframes fade-slow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fade-slow {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-slow {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fade-slow {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

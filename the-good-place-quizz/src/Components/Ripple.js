@@ -36,7 +36,7 @@ class Ripple extends React.Component {
   /* Debounce Code to call the Ripple removing function */
   callCleanUp = (cleanup, delay) => {
     return function() {
-      clearTimeout(2);
+      clearTimeout(200);
       setTimeout(() => {
         cleanup();
       }, delay);
@@ -66,12 +66,23 @@ class Ripple extends React.Component {
 
   cleanUp = () => {
     const initialState = this.initializeState();
+
     this.setState({ ...initialState });
+    /* let slideELements = Array.from(document.querySelectorAll('.slider'));
+    slideELements.forEach(element => {
+      element.classList.remove('slide-left');
+    }); */
   };
 
   renderRippleSpan = () => {
     const { showRipple = false, spanStyles = {} } = this.state;
     const spanArray = Object.keys(spanStyles);
+
+    /* let slideELements = Array.from(document.querySelectorAll('.slider'));
+    slideELements.forEach(element => {
+      element.classList.add('slide-left');
+    }); */
+
     if (spanArray && spanArray.length > 0) {
       return spanArray.map((key, index) => {
         return (
